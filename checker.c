@@ -3,18 +3,7 @@
 
 int alertcount=0;
 
-int batteryIsOk(float temperature, float soc, float chargeRate) {
-  alertcount = tempcheck(temperature);
-  alertcount = soccheck(soc);
-  alertcount = chargeRatecheck(chargeRate);
-}
-
-int main() {
-  assert(batteryIsOk(25, 70, 0.7));
-  assert(!batteryIsOk(50, 85, 0));
-}
-
-  int tempcheck(float temperature)
+ int tempcheck(float temperature)
 {
   if(temperature < 0 || temperature > 45) {
     printf("Temperature out of range!\n");
@@ -34,6 +23,19 @@ int main() {
     return alertcount++;
  }
     
+
+int batteryIsOk(float temperature, float soc, float chargeRate) {
+  alertcount = tempcheck(temperature);
+  alertcount = soccheck(soc);
+  alertcount = chargeRatecheck(chargeRate);
+}
+
+int main() {
+  assert(batteryIsOk(25, 70, 0.7));
+  assert(!batteryIsOk(50, 85, 0));
+}
+
+ 
     
   
   
