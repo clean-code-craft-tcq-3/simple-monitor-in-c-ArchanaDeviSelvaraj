@@ -3,24 +3,31 @@
 
 int alertcount=0;
 
- int tempcheck(float temperature)
+int tempcheck(float temperature)
 {
-  if(temperature < 0 || temperature > 45) {
+  if(temperature < 0 || temperature > 45) 
+  {
     printf("Temperature out of range!\n");
     return alertcount++;
+  }
  }
   
-  int soccheck(float soc)
+int soccheck(float soc)
 {
-  if(soc < 20 || soc > 80) {
+  if(soc < 20 || soc > 80) 
+  {
     printf("State of Charge out of range!\n");
     return alertcount++;
+  }
  }
-    int chargeRatecheck(float chargeRate)
+
+int chargeRatecheck(float chargeRate)
 {
-    if(chargeRate > 0.8) {
+    if(chargeRate > 0.8) 
+    {
     printf("Charge Rate out of range!\n");
     return alertcount++;
+    }
  }
     
 
