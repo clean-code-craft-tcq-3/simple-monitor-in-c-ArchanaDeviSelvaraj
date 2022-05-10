@@ -35,7 +35,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   alertcount = tempcheck(temperature);
   alertcount = soccheck(soc);
   alertcount = chargeRatecheck(chargeRate);
-  return alertcount
+  return alertcount;
 }
 
 int main() {
