@@ -5,6 +5,7 @@ int alertcount=0;
 
 int checklimit(float value,float minlimit,float maxlimit)
 {
+  alertcount=0;
   if (value < minlimit) {
     printf("Below limit\n");
     alertcount=1;
