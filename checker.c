@@ -3,41 +3,28 @@
 
 int alertcount=0;
 
-int tempcheck(float temperature)
+int checklimit(float value,float minlimit,float maxlimit)
 {
-  if(temperature < 0 || temperature > 45) 
-  {
-    printf("Temperature out of range!\n");
+  if (value < minlimit) {
+    printf("Below limit\n");
     alertcount++;
   }
-  return alertcount;
- }
-  
-int soccheck(float soc)
-{
-  if(soc < 20 || soc > 80) 
-  {
-    printf("State of Charge out of range!\n");
+  else if (value > maxlimit){
+    printf("Above limit\n");
     alertcount++;
   }
+  else
+    printf("In range"\n");
   return alertcount;
- }
-
-int chargeRatecheck(float chargeRate)
-{
-    if(chargeRate > 0.8) 
-    {
-    printf("Charge Rate out of range!\n");
-    alertcount++;
-    }
-  return alertcount;
- }
-    
+}
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  alertcount = tempcheck(temperature);
-  alertcount = soccheck(soc);
-  alertcount = chargeRatecheck(chargeRate);
+  printf("Temperature check\n");
+  alertcount = checklimit(temperature,0,45);
+  printf("State of Charge check\n");
+  alertcount = checklimit(soc,20,80);
+  printf("Charge Rate check\n");
+  alertcount = checklimit(chargeRate,0,0.8);
   return alertcount;
 }
 
