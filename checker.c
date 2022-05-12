@@ -7,24 +7,24 @@ int checklimit(float value,float minlimit,float maxlimit)
 {
   alertcount=0;
   if (value < minlimit) {
-    printf("Value is below the limit\n");
+    printf("value is below the limit\n");
     alertcount=1;
   }
   else if (value > maxlimit){
-    printf("Value is above the limit\n");
+    printf("value is above the limit\n");
     alertcount=1;
   }
   else
-    printf("Value is within range\n");
+    printf("value is within range\n");
     return alertcount;
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
   alertcount = checklimit(temperature,0,45);
-  printf("State of Charge check\n");
+  printf("State of Charge ");
   alertcount = checklimit(soc,20,80);
-  printf("Charge Rate check\n");
+  printf("Charge Rate ");
   alertcount = checklimit(chargeRate,0,0.8);
   return alertcount;
 }
