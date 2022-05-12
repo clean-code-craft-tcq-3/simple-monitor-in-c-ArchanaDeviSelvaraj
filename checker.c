@@ -15,7 +15,7 @@ int checklimit(float value,float minlimit,float maxlimit)
   }
   else
     printf("In range\n");
-  return alertcount;
+    return alertcount;
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
@@ -30,7 +30,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
 
 int main() {
   assert(batteryIsOk(25, 70, 0.7)==0);
-  assert(batteryIsOk(50, 85, 0)>0);
+  assert(batteryIsOk(50, 85, 0)==1);
 }
 
  
