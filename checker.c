@@ -7,11 +7,11 @@ int checklimit(float value,float minlimit,float maxlimit)
 {
   if (value < minlimit) {
     printf("Below limit\n");
-    alertcount++;
+    alertcount=1;
   }
   else if (value > maxlimit){
     printf("Above limit\n");
-    alertcount++;
+    alertcount=1;
   }
   else
     printf("In range\n");
