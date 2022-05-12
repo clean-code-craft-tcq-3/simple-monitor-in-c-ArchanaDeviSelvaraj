@@ -7,15 +7,15 @@ int checklimit(float value,float minlimit,float maxlimit)
 {
   alertcount=0;
   if (value < minlimit) {
-    printf("Below limit\n");
+    printf("Value is below the limit\n");
     alertcount=1;
   }
   else if (value > maxlimit){
-    printf("Above limit\n");
+    printf("Value is above the limit\n");
     alertcount=1;
   }
   else
-    printf("In range\n");
+    printf("Value is within range\n");
     return alertcount;
 }
 
@@ -34,6 +34,8 @@ int main() {
   assert(batteryIsOk(46, 81, 0.9)==1);
   assert(batteryIsOk(-1, 19, -1)==1);
   assert(batteryIsOk(30, 50, 0.4)==0);
+  assert(batteryIsOk(30, 50, 0.4)==0);
+  assert(batteryIsOk(-10, 65, 1.0)==0);
 }
 
  
