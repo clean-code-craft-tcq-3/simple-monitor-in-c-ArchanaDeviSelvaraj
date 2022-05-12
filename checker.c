@@ -36,15 +36,15 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
 int main() {
   printf("Check 1\n");
   assert(batteryIsOk(23, 70, 0.7)==0);
-  printf("Check 2\n");
+  printf("\nCheck 2\n");
   assert(batteryIsOk(46, 81, 0.9)==1);
-  printf("Check 3\n");
+  printf("\nCheck 3\n");
   assert(batteryIsOk(-1, 19, -1)==1);
-  printf("Check 4\n");
+  printf("\nCheck 4\n");
   assert(batteryIsOk(30, 50, 0.4)==0);
-  printf("Check 5\n");
+  printf("\nCheck 5\n");
   assert(batteryIsOk(30, 50, 0.4)==0);
-  printf("Check 6\n");
+  printf("\nCheck 6\n");
   assert(batteryIsOk(-10, 65, 1.0)==1);
 }
 
