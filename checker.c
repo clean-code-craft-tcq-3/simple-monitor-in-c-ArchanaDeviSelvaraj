@@ -27,6 +27,11 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Charge Rate ");
   alertcount = checklimit(chargeRate,0,0.8);
   return alertcount;
+  if(alertcount==1){
+    printf("Battery is not okay\n");
+    else
+    printf("Battery is okay\n");
+  }
 }
 
 int main() {
