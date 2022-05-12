@@ -20,7 +20,7 @@ int checklimit(float value,float minlimit,float maxlimit)
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  printf("Temperature check\n");
+  printf("Temperature ");
   alertcount = checklimit(temperature,0,45);
   printf("State of Charge check\n");
   alertcount = checklimit(soc,20,80);
