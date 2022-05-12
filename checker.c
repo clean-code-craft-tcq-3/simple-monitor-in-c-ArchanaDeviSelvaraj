@@ -14,7 +14,7 @@ int checklimit(float value,float minlimit,float maxlimit)
     alertcount++;
   }
   else
-    printf("In range"\n");
+    printf("In range\n");
   return alertcount;
 }
 
