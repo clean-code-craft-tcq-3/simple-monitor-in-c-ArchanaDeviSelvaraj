@@ -2,17 +2,19 @@
 #include <assert.h>
 
 int alertcount=0;
+#define OK 0x00u
+#define NOT_OK 0x01u
 
 int checklimit(float value,float minlimit,float maxlimit)
 {
   alertcount=0;
   if (value < minlimit) {
     printf("value is below the limit\n");
-    alertcount=1;
+    alertcount=OK;
   }
   else if (value > maxlimit){
     printf("value is above the limit\n");
-    alertcount=1;
+    alertcount=NOT_OK;
   }
   else
     printf("value is within range\n");
