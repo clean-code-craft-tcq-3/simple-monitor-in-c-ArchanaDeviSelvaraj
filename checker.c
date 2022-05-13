@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <assert.h>
 
-int alertcount=0;
-
 int checklimit(float value,float minlimit,float maxlimit)
 {
-  alertcount=0;
+  int alertcount=0;
   if (value < minlimit) {
     printf("value is below the limit\n");
     alertcount=1;
@@ -27,10 +25,6 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Charge Rate ");
   int isChargerateInvalid= checklimit(chargeRate,0,0.8);
   int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
-  //if(isTemperatureInvalid||isSocInvalid||isChargerateInvalid==1)
-    //printf("Battery's condition is not okay\n");
-  //else
-    //printf("Battery's condition is okay\n");
   return invalid;
 }
 
