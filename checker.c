@@ -2,19 +2,17 @@
 #include <assert.h>
 
 int alertcount=0;
-#define OK 0x00u
-#define NOT_OK 0x01u
 
 int checklimit(float value,float minlimit,float maxlimit)
 {
   alertcount=0;
   if (value < minlimit) {
     printf("value is below the limit\n");
-    alertcount=OK;
+    alertcount=1;
   }
   else if (value > maxlimit){
     printf("value is above the limit\n");
-    alertcount=NOT_OK;
+    alertcount=1;
   }
   else
     printf("value is within range\n");
@@ -23,12 +21,12 @@ int checklimit(float value,float minlimit,float maxlimit)
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
-  alertcount = checklimit(temperature,0,45);
+  int isTemperatureValid = checklimit(temperature,0,45);
   printf("State of Charge ");
-  alertcount|= checklimit(soc,20,80);
+  int isSocValid = checklimit(soc,20,80);
   printf("Charge Rate ");
-  alertcount|= checklimit(chargeRate,0,0.8);
-  if(alertcount==1)
+  int isChargerateValid= checklimit(chargeRate,0,0.8);
+  if(isTemperatureValid||isSocValid||isChargerateValid==1)
     printf("Battery's condition is not okay\n");
   else
     printf("Battery's condition is okay\n");
