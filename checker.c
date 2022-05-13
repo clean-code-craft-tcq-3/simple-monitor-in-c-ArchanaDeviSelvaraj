@@ -31,7 +31,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
     printf("Battery's condition is not okay\n");
   else
     printf("Battery's condition is okay\n");
-  return alertcount;
+  return invalid;
 }
 
 int main() {
