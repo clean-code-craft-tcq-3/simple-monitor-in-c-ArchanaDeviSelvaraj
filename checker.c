@@ -43,7 +43,7 @@ int main() {
   printf("\nCheck 4\n");
   assert(batteryIsOk(30, 50, 0.4)==0);
   printf("\nCheck 5\n");
-  assert(batteryIsOk(30, 50, 0.4)==0);
+  assert(batteryIsOk(35, 55, 0.3)==0);
   printf("\nCheck 6\n");
   assert(batteryIsOk(-10, 65, 1.0)==1);
   printf("\nCheck 7\n");
