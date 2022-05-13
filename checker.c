@@ -26,7 +26,8 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   int isSocValid = checklimit(soc,20,80);
   printf("Charge Rate ");
   int isChargerateValid= checklimit(chargeRate,0,0.8);
-  if(isTemperatureValid||isSocValid||isChargerateValid==1)
+  int invalid = isTemperatureValid||isSocValid||isChargerateValid
+  if(invalid==1)
     printf("Battery's condition is not okay\n");
   else
     printf("Battery's condition is okay\n");
