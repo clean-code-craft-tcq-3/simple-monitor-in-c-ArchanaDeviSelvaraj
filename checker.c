@@ -21,12 +21,12 @@ int checklimit(float value,float minlimit,float maxlimit)
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
-  int isTemperatureValid = checklimit(temperature,0,45);
+  int isTemperatureInvalid = checklimit(temperature,0,45);
   printf("State of Charge ");
-  int isSocValid = checklimit(soc,20,80);
+  int isSocInvalid = checklimit(soc,20,80);
   printf("Charge Rate ");
-  int isChargerateValid= checklimit(chargeRate,0,0.8);
-  int invalid = isTemperatureValid||isSocValid||isChargerateValid;
+  int isChargerateInvalid= checklimit(chargeRate,0,0.8);
+  int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
   //if(invalid==1)
     //printf("Battery's condition is not okay\n");
   //else
@@ -48,7 +48,7 @@ int main() {
   printf("\nCheck 6\n");
   assert(batteryIsOk(-10, 65, 1.0)==1);
   printf("\nCheck 7\n");
-  batteryIsOk(-20, 90, 0.6);
+  assert(batteryIsOk(-20, 90, 0.6)==1);
 }
 
  
