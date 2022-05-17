@@ -5,7 +5,7 @@ void warning(float value,float minlimit,float maxlimit)
 {
   //int warning=0;
   float tolerance=(5/100)*maxlimit;
-  printf("%f",tolerance\n);
+  printf("%f\n",tolerance);
   if (value == minlimit||value == minlimit+tolerance) {
     printf("Warning: Approaching discharge\n");
     //warning=1;
