@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-void warning(float value,float minlimit,float maxlimit)
+void warning(float *value,float minlimit,float maxlimit)
 {
   float tolerance=(5.000000/100.000000)*maxlimit;
   if (value == minlimit||value == minlimit+tolerance) {
@@ -12,7 +12,7 @@ void warning(float value,float minlimit,float maxlimit)
   }
 }
 
-int checklimit(float value,float minlimit,float maxlimit)
+int checklimit(float *value,float minlimit,float maxlimit)
 {
   int alertcount=0;
   if (value < minlimit) {
@@ -26,7 +26,7 @@ int checklimit(float value,float minlimit,float maxlimit)
   else
   {
     printf("value is within range\n");
-    warning(value,minlimit,maxlimit);
+    warning(*value,minlimit,maxlimit);
   }
  return alertcount;
 }
