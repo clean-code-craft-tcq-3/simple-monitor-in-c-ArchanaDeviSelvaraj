@@ -3,16 +3,12 @@
 
 void warning(float value,float minlimit,float maxlimit)
 {
-  //int warning=0;
   float tolerance=(5.000000/100.000000)*maxlimit;
-  printf("%f\n",tolerance);
   if (value == minlimit||value == minlimit+tolerance) {
     printf("Warning: Approaching discharge\n");
-    //warning=1;
   }
   else if (value == maxlimit||value == maxlimit-tolerance){
     printf("Warning: Approaching charge-peak\n");
-    //warning=1;
   }
 }
 
