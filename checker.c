@@ -30,6 +30,7 @@ int warning(float value,float minlimit,float maxlimit)
     printf("Warning: Approaching charge-peak\n");
     //warning=1;
   }
+}
   
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
