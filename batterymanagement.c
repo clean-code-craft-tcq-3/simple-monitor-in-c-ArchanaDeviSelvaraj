@@ -11,7 +11,7 @@ int TempCheck(float temperature)
 {
   if(l==1)
   printf("Temperature ");
-  if(l==2){
+  if(l==2)
   printf("Temperatur ");
   isTemperatureInvalid = checkvaluebreach(temperature,0,45);
   return isTemperatureInvalid;
