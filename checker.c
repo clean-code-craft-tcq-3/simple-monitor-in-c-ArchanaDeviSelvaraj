@@ -6,11 +6,9 @@ int warning(float value,float minlimit,float maxlimit)
   float tolerance=(5.000000/100.000000)*maxlimit;
   if(value>=minlimit && value<=minlimit+tolerance)
   {
-    printf("Low limit warning\n");
     return 1;
     }
   else if(value<=maxlimit && value>=maxlimit-tolerance){
-    printf("High limit warning\n");
     return 2;
     }
   else
@@ -40,23 +38,23 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   int isTemperatureInvalid = checklimit(temperature,0,45);
   int isTempApproachinglimit = warning(temperature,0,45);
   if(isTempApproachinglimit==1)
-    printf("Warning: Temperature approaching lower limit\n");
+    printf("Warning: Battery Temperature approaching lower limit\n");
   else if (isTempApproachinglimit==2)
-    printf("Warning: Temperature approaching higher limit\n");
+    printf("Warning: Battery Temperature approaching higher limit\n");
   printf("State of Charge ");
   int isSocInvalid = checklimit(soc,20,80);
   int isSocApproachinglimit = warning(soc,20,80);
   if(isSocApproachinglimit==1)
-    printf("Warning: Approaching discharge\n");
+    printf("Warning: Battery Approaching discharge\n");
   else if (isSocApproachinglimit==2)
-    printf("Warning: Approaching charge-peak\n");
+    printf("Warning: Battery Approaching charge-peak\n");
   printf("Charge Rate ");
   int isChargerateInvalid= checklimit(chargeRate,0,0.8);
   int isChargerateApproachinglimit = warning(chargeRate,0,0.8);
   if(isChargerateApproachinglimit==1)
-    printf("Warning: Charge rate approaching lower limit\n");
+    printf("Warning: Battery Charge rate approaching lower limit\n");
   else if (isChargerateApproachinglimit==2)
-    printf("Warning: Charge rate approaching higher limit\n");
+    printf("Warning: Battery Charge rate approaching higher limit\n");
   int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
   return invalid;
 }
