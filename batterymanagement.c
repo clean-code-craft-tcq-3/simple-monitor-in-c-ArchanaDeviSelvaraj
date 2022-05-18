@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "test.h"
 
-int batteryIsOk(float temperature, float soc, float chargeRate) {
+int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
   int isTemperatureInvalid = checklimit(temperature,0,45);
   int isTempApproachinglimit = warning(temperature,0,45);
