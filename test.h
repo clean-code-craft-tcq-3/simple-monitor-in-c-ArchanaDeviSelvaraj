@@ -1,7 +1,7 @@
 #include <assert.h>
 #include "checker.h"
 
-  int test()
+  void test()
   {
   printf("Check 1\n");
   assert(batteryIsOk(23, 70, 0.7)==0);
@@ -23,5 +23,4 @@
   assert(batteryIsOk(43, 77, 0.78)==0);
   printf("\nCheck 10\n");
   assert(batteryIsOk(2, 24, 0.03)==0);
-  return 1;
   }
