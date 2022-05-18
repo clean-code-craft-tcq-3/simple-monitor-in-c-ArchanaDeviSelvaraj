@@ -17,9 +17,9 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
 }
 
 int main() {
-  l="1";
+  l=1;
   test();
-  l=2";
+  l=2;
   test();
   return 0;
 }
