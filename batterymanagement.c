@@ -12,6 +12,9 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   int isSocInvalid = checkvaluebreach(soc,20,80);
   printf("Charge Rate ");
   int isChargerateInvalid= checkvaluebreach(chargeRate,0,0.8);
+  int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
+  earlywarning(invalid,temperature,soc,chargeRate);
+  return invalid;
   }
   if(l==2){
   printf("Temperatur ");
@@ -20,10 +23,10 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   int isSocInvalid = checkvaluebreach(soc,20,80);
   printf("Ladestrom ");
   int isChargerateInvalid= checkvaluebreach(chargeRate,0,0.8);
-  }
   int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
   earlywarning(invalid,temperature,soc,chargeRate);
-  return invalid; 
+  return invalid;
+  } 
 }
 
 int main() {
