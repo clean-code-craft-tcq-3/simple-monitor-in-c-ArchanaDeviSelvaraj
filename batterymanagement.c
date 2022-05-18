@@ -21,7 +21,7 @@ int SocCheck(float soc)
 {
   if(l==1)
   printf("State of Charge ");
-  if(l==2){
+  if(l==2)
   printf("Ladezustand ");
   isSocInvalid = checkvaluebreach(soc,20,80);
   return isSocInvalid;
@@ -31,7 +31,7 @@ int ChargerateCheck(float soc)
 {
   if(l==1)
   printf("Charge Rate ");
-  if(l==2){
+  if(l==2)
   printf("Ladestrom ");
   isChargerateInvalid = checkvaluebreach(soc,20,80);
   return isChargerateInvalid;
