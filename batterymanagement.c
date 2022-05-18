@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "test.h"
 
-enum languages{English,German};,
+enum languages{English=1,German=2};,
 enum languages l;
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
@@ -17,9 +17,9 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
 }
 
 int main() {
-  l="English";
+  l="1";
   test();
-  l="German";
+  l=2";
   test();
   return 0;
 }
