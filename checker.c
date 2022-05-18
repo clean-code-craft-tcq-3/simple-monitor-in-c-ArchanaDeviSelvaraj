@@ -26,7 +26,7 @@ int checklimit(float value,float minlimit,float maxlimit)
   else
   {
     printf("value is within range\n");
-    warning(*value,minlimit,maxlimit);
+    warning(value,minlimit,maxlimit);
   }
  return alertcount;
 }
