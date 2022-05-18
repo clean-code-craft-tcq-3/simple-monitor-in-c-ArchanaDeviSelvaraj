@@ -4,7 +4,7 @@
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
   int isTemperatureInvalid = checklimit(temperature,0,45);
-  int isTempApproachinglimit = warning(temperature,0,45);.
+  int isTempApproachinglimit = warning(temperature,0,45);
   (isTempApproachinglimit==1) ? ((isTempApproachinglimit==2)? printf("Warning: Battery Temperature approaching higher limit\n") : printf("")) : ("Warning: Battery Temperature approaching lower limit\n");
   //if(isTempApproachinglimit==1)
     //printf("Warning: Battery Temperature approaching lower limit\n");
