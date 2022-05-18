@@ -3,9 +3,6 @@
 
 enum languages{English=1,German=2};
 enum languages l;
-int isTemperatureInvalid=0;
-int isSocInvalid=0;
-int isChargerateInvalid=0;
 
 int TempCheck(float temperature)
 {
@@ -13,7 +10,7 @@ int TempCheck(float temperature)
   printf("Temperature ");
   if(l==2)
   printf("Temperatur ");
-  isTemperatureInvalid = checkvaluebreach(temperature,0,45);
+  int isTemperatureInvalid = checkvaluebreach(temperature,0,45);
   return isTemperatureInvalid;
 }
   
@@ -23,7 +20,7 @@ int SocCheck(float soc)
   printf("State of Charge ");
   if(l==2)
   printf("Ladezustand ");
-  isSocInvalid = checkvaluebreach(soc,20,80);
+  int isSocInvalid = checkvaluebreach(soc,20,80);
   return isSocInvalid;
 }
   
@@ -33,16 +30,16 @@ int ChargerateCheck(float soc)
   printf("Charge Rate ");
   if(l==2)
   printf("Ladestrom ");
-  isChargerateInvalid = checkvaluebreach(soc,20,80);
+  int isChargerateInvalid = checkvaluebreach(soc,20,80);
   return isChargerateInvalid;
 }
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   int invalid=0;
-  isTemperatureInvalid = TempCheck(temperature);
-  isSocInvalid = SocCheck(soc);
-  isChargerateInvalid = ChargerateCheck(chargeRate);
-  invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
+  int isTemperatureInvalid = TempCheck(temperature);
+  int isSocInvalid = SocCheck(soc);
+  int isChargerateInvalid = ChargerateCheck(chargeRate);
+  int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
   earlywarning(invalid,temperature,soc,chargeRate);
   return invalid;
  }
