@@ -5,7 +5,7 @@ enum languages{English=1,German=2};
 enum languages l;
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
-  printf("Temperature ");
+  (l==1)?printf("Temperature "):printf("Temperatur ");
   int isTemperatureInvalid = checkvaluebreach(temperature,0,45);
   printf("State of Charge ");
   int isSocInvalid = checkvaluebreach(soc,20,80);
