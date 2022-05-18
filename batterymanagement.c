@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "test.h"
 
-enum languages{English=1,German=2};,
+enum languages{English=1,German=2};
 enum languages l;
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
