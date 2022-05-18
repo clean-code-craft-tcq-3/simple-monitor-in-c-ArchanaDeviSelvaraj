@@ -9,7 +9,12 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   printf("Charge Rate ");
   int isChargerateInvalid= checklimit(chargeRate,0,0.8);
   int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
-  return invalid;
+  if(invalid!=1)
+  {
+  printf("Though values are within range, check for early warning if any\n");
+  printwarning(temperature,soc,chargeRate);
+  }
+  return invalid; 
 }
 
 int main() {
