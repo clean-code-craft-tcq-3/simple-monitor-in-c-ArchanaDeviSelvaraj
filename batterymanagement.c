@@ -7,7 +7,7 @@ int isTemperatureInvalid=0;
 int isSocInvalid=0;
 int isChargerateInvalid=0;
 
-int Tempcheck(float temperature)
+int TempCheck(float temperature)
 {
   if(l==1)
   printf("Temperature ");
