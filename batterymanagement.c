@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "test.h"
 
+enum languages{English,German};,
+enum languages l;
+
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
   int isTemperatureInvalid = checkvaluebreach(temperature,0,45);
@@ -14,6 +17,9 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
 }
 
 int main() {
+  l="English";
+  test();
+  l="German";
   test();
   return 0;
 }
