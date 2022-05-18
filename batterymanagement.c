@@ -1,38 +1,6 @@
 #include <stdio.h>
 #include "test.h"
 
-int warning(float value,float minlimit,float maxlimit)
-{
-  float tolerance=(5.000000/100.000000)*maxlimit;
-  if(value>=minlimit && value<=minlimit+tolerance)
-  {
-    return 1;
-    }
-  else if(value<=maxlimit && value>=maxlimit-tolerance){
-    return 2;
-    }
-  else
-    return 0;
-}
-
-int checklimit(float value,float minlimit,float maxlimit)
-{
-  int alertcount=0;
-  if (value < minlimit) {
-    printf("value is below the limit\n");
-    alertcount=1;
-  }
-  else if (value > maxlimit){
-    printf("value is above the limit\n");
-    alertcount=1;
-  }
-  else
-  {
-    printf("value is within range\n");
-  }
- return alertcount;
-}
-
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
   int isTemperatureInvalid = checklimit(temperature,0,45);
