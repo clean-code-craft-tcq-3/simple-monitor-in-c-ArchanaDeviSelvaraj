@@ -10,7 +10,7 @@ int warning(float value,float minlimit,float maxlimit)
     printf("Low limit warning\n");
     return 1;
     }
-  else if ((isInRange(value,maxlimit,maxlimit-tolerance)){
+  else if(isInRange(value,maxlimit,maxlimit-tolerance)){
     printf("High limit warning\n");
     return 2;
     }
