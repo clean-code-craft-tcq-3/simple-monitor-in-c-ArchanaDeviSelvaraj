@@ -4,19 +4,6 @@
 enum languages{English=1,German=2};
 enum languages l;
 
-int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
-  int isTemperatureInvalid=0;
-  int isSocInvalid=0;
-  int isChargerateInvalid=0;
-  int invalid=0;
-  isTemperatureInvalid = TempCheck(temperature);
-  isSocInvalid = SocCheck(soc);
-  isChargerateInvalid = ChargerateCheck(chargeRate);
-  invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
-  earlywarning(invalid,temperature,soc,chargeRate);
-  return invalid;
- }
-
 int Tempcheck(float temperature)
 {
   if(l==1)
@@ -47,9 +34,18 @@ int ChargerateCheck(float soc)
   return isChargerateInvalid;
 }
 
-    
-    
-
+int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
+  int isTemperatureInvalid=0;
+  int isSocInvalid=0;
+  int isChargerateInvalid=0;
+  int invalid=0;
+  isTemperatureInvalid = TempCheck(temperature);
+  isSocInvalid = SocCheck(soc);
+  isChargerateInvalid = ChargerateCheck(chargeRate);
+  invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
+  earlywarning(invalid,temperature,soc,chargeRate);
+  return invalid;
+ }
 
 int main() {
   l=1;
