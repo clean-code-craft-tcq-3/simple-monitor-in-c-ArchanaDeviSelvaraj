@@ -5,12 +5,22 @@ enum languages{English=1,German=2};
 enum languages l;
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
-  (l==1)?printf("Temperature "):printf("Temperatur ");
+  if(l==1){
+  printf("Temperature ");
   int isTemperatureInvalid = checkvaluebreach(temperature,0,45);
-  (l==1)?printf("State of Charge "):printf("Ladezustand ");
+  printf("State of Charge ");
   int isSocInvalid = checkvaluebreach(soc,20,80);
-  (l==1)?printf("Charge Rate "):printf("Ladestrom ");
+  printf("Charge Rate ");
   int isChargerateInvalid= checkvaluebreach(chargeRate,0,0.8);
+  }
+  if(l==2){
+  printf("Temperatur ");
+  int isTemperatureInvalid = checkvaluebreach(temperature,0,45);
+  printf("Ladezustand ");
+  int isSocInvalid = checkvaluebreach(soc,20,80);
+  printf("Ladestrom ");
+  int isChargerateInvalid= checkvaluebreach(chargeRate,0,0.8);
+  }
   int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
   earlywarning(invalid,temperature,soc,chargeRate);
   return invalid; 
