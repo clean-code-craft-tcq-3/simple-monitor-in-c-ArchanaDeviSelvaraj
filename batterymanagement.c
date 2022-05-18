@@ -3,6 +3,9 @@
 
 enum languages{English=1,German=2};
 enum languages l;
+int isTemperatureInvalid=0;
+int isSocInvalid=0;
+int isChargerateInvalid=0;
 
 int Tempcheck(float temperature)
 {
@@ -35,9 +38,6 @@ int ChargerateCheck(float soc)
 }
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
-  int isTemperatureInvalid=0;
-  int isSocInvalid=0;
-  int isChargerateInvalid=0;
   int invalid=0;
   isTemperatureInvalid = TempCheck(temperature);
   isSocInvalid = SocCheck(soc);
