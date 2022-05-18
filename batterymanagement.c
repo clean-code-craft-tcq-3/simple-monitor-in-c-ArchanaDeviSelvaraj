@@ -35,7 +35,6 @@ int ChargerateCheck(float soc)
 }
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
-  int invalid=0;
   int isTemperatureInvalid = TempCheck(temperature);
   int isSocInvalid = SocCheck(soc);
   int isChargerateInvalid = ChargerateCheck(chargeRate);
