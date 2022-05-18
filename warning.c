@@ -7,7 +7,7 @@ int warning(float value,float minlimit,float maxlimit)
     //1-Approaching lower limit
     }
   else if(maxlimit-tolerance<=value<=maxlimit){
-    return 2;,
+    return 2;
     //2-Approaching upper limit
     }
   else
