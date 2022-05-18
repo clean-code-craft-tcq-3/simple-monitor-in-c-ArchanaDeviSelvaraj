@@ -4,7 +4,6 @@
 int warning(float value,float minlimit,float maxlimit)
 {
   float tolerance=(5.000000/100.000000)*maxlimit;
-  printf("%f\n",tolerance);
   if(value>=minlimit && value<=minlimit+tolerance)
   {
     printf("Low limit warning\n");
@@ -40,7 +39,6 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
   int isTemperatureInvalid = checklimit(temperature,0,45);
   int isTempApproachinglimit = warning(temperature,0,45);
-  printf("%d\n",isTempApproachinglimit);
   if(isTempApproachinglimit==1)
     printf("Warning: Temperature approaching lower limit\n");
   else if (isTempApproachinglimit==2)
