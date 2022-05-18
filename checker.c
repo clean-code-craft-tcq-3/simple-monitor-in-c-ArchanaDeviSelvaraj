@@ -77,7 +77,9 @@ int main() {
   printf("\nCheck 8\n");
   assert(batteryIsOk(-40, 24, 0.5)==1);
   printf("\nCheck 9\n");
-  assert(batteryIsOk(43, 24, 0.5)==0);
+  assert(batteryIsOk(43, 77, 0.78)==0);
+  printf("\nCheck 9\n");
+  assert(batteryIsOk(2, 24, 0.03)==0);
 }
 
  
