@@ -13,7 +13,7 @@ int isSocApproachinglimit = warning(soc,20,80);
 void printchargeRatewarning(float chargeRate)
 {
 int isChargerateApproachinglimit = warning(chargeRate,0,0.8);
-(isChargerateApproachinglimit==1) ? printf("Warning: Battery Charge rate approaching lower limit\n") : ((isSocApproachinglimit==2)? printf("Warning: Battery Charge rate approaching higher limit\n") : printf("No early warning for charge rate\n"));
+(isChargerateApproachinglimit==1) ? printf("Warning: Battery Charge rate approaching lower limit\n") : ((isChargerateApproachinglimit==2)? printf("Warning: Battery Charge rate approaching higher limit\n") : printf("No early warning for charge rate\n"));
 }     
 
 void printbatterystatus(float temperature, float soc, float chargeRate)
