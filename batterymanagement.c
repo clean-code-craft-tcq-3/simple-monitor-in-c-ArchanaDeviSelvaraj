@@ -26,7 +26,7 @@ int SocCheck(float soc)
   return isSocInvalid;
 }
   
-int ChargerateCheck(float soc)
+int ChargerateCheck(float chargeRate)
 {
   if(l==1)
   printf("Charge Rate ");
