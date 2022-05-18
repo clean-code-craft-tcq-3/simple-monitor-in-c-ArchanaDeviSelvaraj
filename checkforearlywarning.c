@@ -6,4 +6,6 @@ void earlywarning(int invalid,float temperature, float soc, float chargeRate)
   printf("Though values are within range, check for early warning if any\n");
   printwarning(temperature,soc,chargeRate);
   }
+  else
+  printf("Battery status not okay\n");
 }
