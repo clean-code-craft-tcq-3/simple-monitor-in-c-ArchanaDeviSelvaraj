@@ -1,3 +1,4 @@
+#include <stdio.h>
 int checklimit(float value,float minlimit,float maxlimit)
 {
   int alertcount=0;
