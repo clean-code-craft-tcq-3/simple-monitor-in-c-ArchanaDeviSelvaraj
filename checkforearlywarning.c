@@ -1,4 +1,5 @@
-void earlywarning(int invalid)
+#include "batterymanagement.h"
+void earlywarning(int invalid,float temperature, float soc, float chargeRate)
 {
   if(invalid!=1)
   {
