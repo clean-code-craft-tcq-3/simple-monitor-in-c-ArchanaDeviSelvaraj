@@ -27,7 +27,7 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   return invalid;
 }
 
-void main() {
+int main() {
   test();
   return 0;
 }
