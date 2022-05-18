@@ -1,5 +1,5 @@
 #include "batterymanagement.h"
-void printwarning(float temperature, float soc, float chargeRate)
+void printbatterystatus(float temperature, float soc, float chargeRate)
 {
 int isTempApproachinglimit = warning(temperature,0,45);
 (isTempApproachinglimit==1) ? printf("Warning: Battery Temperature approaching lower limit\n") : ((isTempApproachinglimit==2)? printf("Warning: Battery Temperature approaching higher limit\n") : printf("No early warning for temperature\n"));
