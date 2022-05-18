@@ -1,4 +1,6 @@
-  void assert()
+  #include <assert.h>
+
+  void test()
   {
   printf("Check 1\n");
   assert(batteryIsOk(23, 70, 0.7)==0);
