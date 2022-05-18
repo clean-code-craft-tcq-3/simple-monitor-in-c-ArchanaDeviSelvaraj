@@ -32,7 +32,7 @@ int ChargerateCheck(float soc)
   printf("Charge Rate ");
   if(l==2)
   printf("Ladestrom ");
-  int isChargerateInvalid = checkvaluebreach(soc,20,80);
+  int isChargerateInvalid = checkvaluebreach(chargeRate,0,0.8);
   printf("%d\n",isChargerateInvalid);
   return isChargerateInvalid;
 }
