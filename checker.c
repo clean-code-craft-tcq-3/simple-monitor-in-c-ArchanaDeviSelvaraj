@@ -60,7 +60,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
 }
 
 int main() {
-  void test();
+  int test();
 }
 
  
