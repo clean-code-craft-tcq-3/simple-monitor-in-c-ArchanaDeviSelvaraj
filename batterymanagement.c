@@ -11,6 +11,7 @@ int TempCheck(float temperature)
   if(l==2)
   printf("Temperatur ");
   int isTemperatureInvalid = checkvaluebreach(temperature,0,45);
+  printf("%d/n",isTemperatureInvalid);
   return isTemperatureInvalid;
 }
   
@@ -36,6 +37,7 @@ int ChargerateCheck(float soc)
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   int isTemperatureInvalid = TempCheck(temperature);
+  printf("%d/n",isTemperatureInvalid);
   int isSocInvalid = SocCheck(soc);
   int isChargerateInvalid = ChargerateCheck(chargeRate);
   int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
