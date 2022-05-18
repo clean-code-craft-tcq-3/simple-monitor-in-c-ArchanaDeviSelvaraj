@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <assert.h>
+#include "test.h"
 
 int warning(float value,float minlimit,float maxlimit)
 {
