@@ -45,7 +45,7 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
   int isChargerateInvalid = ChargerateCheck(chargeRate);
   printf("%d\n",isChargerateInvalid);
   int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
-  printf(%d\n",invalid);
+  printf("%d\n",invalid);
   earlywarning(invalid,temperature,soc,chargeRate);
   return invalid;
  }
