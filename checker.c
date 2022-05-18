@@ -5,12 +5,12 @@ int warning(float value,float minlimit,float maxlimit)
 {
   float tolerance=(5.000000/100.000000)*maxlimit;
   printf("%f\n",tolerance);
-  if(isInRange(value,minlimit,minlimit+tolerance)
+  if(isInRange(value,minlimit,minlimit+tolerance))
   {
     printf("Low limit warning\n");
     return 1;
     }
-  else if ((isInRange(value,maxlimit,maxlimit-tolerance){
+  else if ((isInRange(value,maxlimit,maxlimit-tolerance)){
     printf("High limit warning\n");
     return 2;
     }
