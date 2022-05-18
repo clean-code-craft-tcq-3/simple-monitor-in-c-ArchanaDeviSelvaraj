@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <assert.h>
 
-void warning(float value,float minlimit,float maxlimit)
+int warning(float value,float minlimit,float maxlimit)
 {
   float tolerance=(5.000000/100.000000)*maxlimit;
   if (value == minlimit||value == minlimit+tolerance) {
-    printf("Warning: Approaching discharge\n");
-  }
+    return 1;
+    }
   else if (value == maxlimit||value == maxlimit-tolerance){
-    printf("Warning: Approaching charge-peak\n");
-  }
+    return 2;
+    }
+  else
+    return 0;
 }
 
 int checklimit(float value,float minlimit,float maxlimit)
@@ -26,7 +28,6 @@ int checklimit(float value,float minlimit,float maxlimit)
   else
   {
     printf("value is within range\n");
-    warning(value,minlimit,maxlimit);
   }
  return alertcount;
 }
@@ -34,6 +35,11 @@ int checklimit(float value,float minlimit,float maxlimit)
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Temperature ");
   int isTemperatureInvalid = checklimit(temperature,0,45);
+  int isTempApproachinglimit = warning(temperature,0,45);
+  if(isTempApproachinglimit==1)
+    printf("Warning: Approaching discharge\n");
+  else if ((isTempApproachinglimit==2)
+    printf("Warning: Approaching charge-peak\n");
   printf("State of Charge ");
   int isSocInvalid = checklimit(soc,20,80);
   printf("Charge Rate ");
