@@ -6,3 +6,5 @@ int warning(float value,float minlimit,float maxlimit);
 int isValuebreached(float value,float minlimit,float maxlimit);
 void printbatterystatus(float temperature, float soc, float chargeRate);
 void earlywarning(int invalid,float temperature, float soc, float chargeRate);
+void printtempwarningL1(int isTempApproachingLimit);
+void printtempwarningL2(int isTempApproachingLimit);
