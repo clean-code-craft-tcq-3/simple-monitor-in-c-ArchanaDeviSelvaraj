@@ -24,5 +24,7 @@
   assert(CheckBatteryStatus(43, 77, 0.78)==0);
   printf("\nCheck 10\n");
   assert(CheckBatteryStatus(2, 24, 0.03)==0);
+  //test to check warning
   assert(warning(22,20,80)==1);
+  assert(warning(0.5,0,0.8)==0);  
   }
