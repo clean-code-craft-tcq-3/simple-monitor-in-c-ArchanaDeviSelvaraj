@@ -20,7 +20,10 @@ int isValuebreached(float value,float minlimit,float maxlimit)
   }
   else
   {
+    if(l==1)
     printf("value is within range\n");
+    if(l==2) 
+    printf("Wert liegt im Bereich\n");
     // alertcount=0 means value within range
   }
  return alertcount;
