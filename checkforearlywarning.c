@@ -16,5 +16,10 @@ void earlywarning(int invalid,float temperature, float soc, float chargeRate)
    printbatterystatus(temperature,soc,chargeRate);
   }
   else
-  printf("Battery status not okay\n");
+  {
+      if(l==1)
+      printf("Battery status not okay\n");
+      if(l==2)
+      printf("Batteriestatus nicht in Ordnung\n");
+  }
 }
