@@ -1,21 +1,21 @@
 #include "batterymanagement.h"
 
+void printtempwarningL1(int isTempApproachingLimit)
+{
+(isTempApproachingLimit==1) ? printf("Warning: Battery Temperature approaching lower limit\n") : ((isTempApproachinglimit==2)? printf("Warning: Battery Temperature approaching higher limit\n") : printf("No early warning for temperature\n"));
+}
+
+void printtempwarningL2(int isTempApproachingLimit)
+{
+(isTempApproachingLimit==1) ? printf("Warnung: Batterietemperatur nähert sich dem unteren Grenzwert\n") : ((isTempApproachinglimit==2)? printf("Warnung: Batterietemperatur nähert sich dem oberen Grenzwert\n") : printf("Keine Frühwarnung für Temperature\n"));
+}
+
 void printtempwarning(int isTempApproachingLimit)
 {
 if(l==1)
 printtempwarningL1(isTempApproachingLimit);
 if(l==2)
 printtempwarningL2(isTempApproachingLimit);
-}
-
-void printtempwarningL1(int isTempApproachingLimit)
-{
-(isTempApproachinglimit==1) ? printf("Warning: Battery Temperature approaching lower limit\n") : ((isTempApproachinglimit==2)? printf("Warning: Battery Temperature approaching higher limit\n") : printf("No early warning for temperature\n"));
-}
-
-void printtempwarningL2(int isTempApproachingLimit)
-{
-(isTempApproachinglimit==1) ? printf("Warnung: Batterietemperatur nähert sich dem unteren Grenzwert\n") : ((isTempApproachinglimit==2)? printf("Warnung: Batterietemperatur nähert sich dem oberen Grenzwert\n") : printf("Keine Frühwarnung für Temperature\n"));
 }
 
 void isTempApproachinglimit(float temperature)
