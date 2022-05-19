@@ -68,6 +68,7 @@ Same for Temperature and Charge-rate.
 Keep in mind: Though we are starting with warning levels for all parameters, customers may give feedback to have warnings only for some parameters and not others. Minimize the change needed for such ‘tuning’.
 
 **Extension 2: Support a language in addition to English**
+
 Our market has expanded to German-speaking countries! Switch the language of the printed messages based on a global variable.
 
 Use Google translate if you aren’t familiar with German.
