@@ -3,6 +3,7 @@
 
   void test()
   {
+  //test to check battery status
   printf("Check 1\n");
   assert(CheckBatteryStatus(23, 70, 0.7)==0);
   printf("\nCheck 2\n");
@@ -23,4 +24,8 @@
   assert(CheckBatteryStatus(43, 77, 0.78)==0);
   printf("\nCheck 10\n");
   assert(CheckBatteryStatus(2, 24, 0.03)==0);
+  //test to check warning
+  assert(warning(44,0,45)==2);
+  assert(warning(22,20,80)==1);
+  assert(warning(0.5,0,0.8)==0);  
   }
