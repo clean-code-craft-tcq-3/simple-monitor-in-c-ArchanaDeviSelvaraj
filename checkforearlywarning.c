@@ -1,7 +1,9 @@
 #include "batterymanagement.h"
 
-int checklimitforwarning(float value,float minlimit,float maxlimit,float tolerance)
+
+int warning(float value,float minlimit,float maxlimit)
 {
+  float tolerance=(5.000000/100.000000)*maxlimit;
   if(minlimit<=value && value<=(minlimit+tolerance))
     return 1;
     //1-Approaching lower limit
@@ -10,15 +12,7 @@ int checklimitforwarning(float value,float minlimit,float maxlimit,float toleran
     //2-Approaching upper limit
   else
     return 0;
-  //0-No warning
-}
-
-int warning(float value,float minlimit,float maxlimit)
-{
-  int warningcount=0;
-  float tolerance=(5.000000/100.000000)*maxlimit;
-  warningcount = checklimitforwarning(value,minlimit,maxlimit,tolerance);
-  return warningcount;
+  //0-No warning  
 }
 
 void printmessage()
