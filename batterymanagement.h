@@ -8,3 +8,7 @@ void printbatterystatus(float temperature, float soc, float chargeRate);
 void earlywarning(int invalid,float temperature, float soc, float chargeRate);
 void printtempwarningL1(int isTempApproachingLimit);
 void printtempwarningL2(int isTempApproachingLimit);
+void printsocwarningL1(int isSocApproachingLimit);
+void printsocwarningL2(int isSocApproachingLimit);
+void printchargeratewarningL1(int isChargerateApproachingLimit);
+void printchargeratewarningL2(int isChargerateApproachingLimit);
