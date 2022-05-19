@@ -23,5 +23,7 @@ void printchargeratewarning(int isChargerateApproachingLimit);
 void isTempApproachinglimit(float temperature);
 void isSocApproachinglimit(float soc);
 void isChargerateApproachinglimit(float chargeRate);
+int lowlimitcheck(float value,float minlimit,float maxlimit,float tolerance);
+int highlimitcheck(float value,float minlimit,float maxlimit,float tolerance); 
 void test();
 
