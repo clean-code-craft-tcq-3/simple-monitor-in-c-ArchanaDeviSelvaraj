@@ -8,3 +8,24 @@ void printtempwarningL2(int isTempApproachingLimit)
 (isTempApproachingLimit==1) ? printf("Warnung: Batterietemperatur nähert sich dem unteren Grenzwert\n") : ((isTempApproachingLimit==2)? printf("Warnung: Batterietemperatur nähert sich dem oberen Grenzwert\n") : printf("Keine Frühwarnung für Temperature\n"));
 }
 
+
+void printsocwarningL1(int isSocApproachingLimit)
+{
+(isSocApproachingLimit==1) ? printf("Warning: Warning: Battery Approaching discharge\n") : ((isSocApproachingLimit==2)? printf("Warning: Battery Temperature approaching higher limit\n") : printf("No early warning for temperature\n"));
+}
+
+void printsocwarningL2(int isSocApproachingLimit)
+{
+(isSocApproachingLimit==1) ? printf("Warnung: Batterietemperatur nähert sich dem unteren Grenzwert\n") : ((isSocApproachingLimit==2)? printf("Warnung: Batterietemperatur nähert sich dem oberen Grenzwert\n") : printf("Keine Frühwarnung für Temperature\n"));
+}
+
+void printchargeratewarningL1(int isChargerateApproachingLimit)
+{
+(isChargerateApproachingLimit==1) ? printf("Warning: Battery Charge rate approaching lower limit\n") : ((isChargerateApproachingLimit==2)? printf("Warning: Battery Charge rate approaching higher limit\n") : printf("No early warning for temperature\n"));
+}
+
+void printchargeratewarningL2(int isChargerateApproachingLimit)
+{
+(isChargerateApproachingLimit==1) ? printf("Warnung: Batterietemperatur nähert sich dem unteren Grenzwert\n") : ((isChargerateApproachingLimit==2)? printf("Warnung: Batterietemperatur nähert sich dem oberen Grenzwert\n") : printf("Keine Frühwarnung für Temperature\n"));
+}
+
