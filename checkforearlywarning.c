@@ -8,6 +8,9 @@ int checklimitforwarning(float value,float minlimit,float maxlimit,float toleran
   if((maxlimit-tolerance)<=value && value<=maxlimit)
     return 2;
     //2-Approaching upper limit
+  else
+    return 0;
+  //0-No warning
 }
 
 int warning(float value,float minlimit,float maxlimit)
