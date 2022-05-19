@@ -43,6 +43,7 @@ int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
 int main() {
   l=1;
   test();
+  printf("\n");
   l=2;
   test();
   return 0;
