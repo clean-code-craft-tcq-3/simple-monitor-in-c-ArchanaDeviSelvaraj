@@ -7,6 +7,14 @@ void printmessage()
     if(l==2)
     printf("Obwohl die Werte innerhalb des Bereichs liegen, überprüfen Sie gegebenenfalls die Frühwarnung\n");
 }
+
+void printbatterystatusnotokay()
+{
+      if(l==1)
+      printf("Battery status not okay\n");
+      if(l==2)
+      printf("Batteriestatus nicht in Ordnung\n");
+}
   
 void earlywarning(int invalid,float temperature, float soc, float chargeRate)
 {
@@ -17,9 +25,6 @@ void earlywarning(int invalid,float temperature, float soc, float chargeRate)
   }
   else
   {
-      if(l==1)
-      printf("Battery status not okay\n");
-      if(l==2)
-      printf("Batteriestatus nicht in Ordnung\n");
+      printbatterystatusnotokay();
   }
 }
