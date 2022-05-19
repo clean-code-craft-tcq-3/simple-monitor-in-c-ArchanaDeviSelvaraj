@@ -6,7 +6,7 @@ int lowlimitcheck(float value,float minlimit,float maxlimit,float tolerance)
     return 1;
   //1-Approaching lower limit
   else
-    highlimitcheck(value,minlimit,maxlimit,tolerance); 
+    return 0;
 }
 
 int highlimitcheck(float value,float minlimit,float maxlimit,float tolerance)
@@ -16,14 +16,21 @@ int highlimitcheck(float value,float minlimit,float maxlimit,float tolerance)
     //2-Approaching upper limit
   else
     return 0;
-  //0-No warning 
 }
 int warning(float value,float minlimit,float maxlimit)
 {
   float tolerance=(5.000000/100.000000)*maxlimit;
-  int warningcount = 0;
-  warningcount = lowlimitcheck(value,minlimit,maxlimit,tolerance);  
-  return warningcount;
+  int warningcount1 = 0;
+  int warningcount2 = 0;
+  warningcount1 = lowlimitcheck(value,minlimit,maxlimit,tolerance);  
+  warningcount2 = highlimitcheck(value,minlimit,maxlimit,tolerance); 
+  if(warningcount1!=0)
+    return warningcount1;
+  if(warningcount2!=0)
+    return warningcount2;
+  else
+    return 0;
+  //0-No warning 
 }
 
 void printmessage()
