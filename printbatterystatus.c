@@ -3,7 +3,10 @@
 void printtempwarning(float temperature)
 {
 int isTempApproachinglimit = warning(temperature,0,45);
+if(l==1)
 (isTempApproachinglimit==1) ? printf("Warning: Battery Temperature approaching lower limit\n") : ((isTempApproachinglimit==2)? printf("Warning: Battery Temperature approaching higher limit\n") : printf("No early warning for temperature\n"));
+if(l==2)
+(isTempApproachinglimit==1) ? printf("Warnung: Batterietemperatur nähert sich dem unteren Grenzwert\n") : ((isTempApproachinglimit==2)? printf("Warnung: Batterietemperatur nähert sich dem oberen Grenzwert\n") : printf("Keine Frühwarnung für Temperature\n"));
 }
 void printsocwarning(float soc)
 {
