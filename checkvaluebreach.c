@@ -1,5 +1,5 @@
 #include <stdio.h>
-int checkvaluebreach(float value,float minlimit,float maxlimit)
+int isValuebreached(float value,float minlimit,float maxlimit)
 {
   int alertcount=0;
   if (value < minlimit) {
