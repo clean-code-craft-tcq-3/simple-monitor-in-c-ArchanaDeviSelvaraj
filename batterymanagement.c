@@ -35,10 +35,10 @@ int isChargerateInvalid(float chargeRate)
 }
 
 int CheckBatteryStatus(float temperature, float soc, float chargeRate) {
-  int isTemperatureInvalid = isTemperatureInvalid(temperature);
-  int isSocInvalid = isSocInvalid(soc);
-  int isChargerateInvalid = isChargerateInvalid(chargeRate);
-  int invalid = isTemperatureInvalid||isSocInvalid||isChargerateInvalid;
+  int isTemperatureinvalid = isTemperatureInvalid(temperature);
+  int isSocinvalid = isSocInvalid(soc);
+  int isChargerateinvalid = isChargerateInvalid(chargeRate);
+  int invalid = isTemperatureinvalid||isSocinvalid||isChargerateinvalid;
   earlywarning(invalid,temperature,soc,chargeRate);
   return invalid;
  }
