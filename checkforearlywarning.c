@@ -5,7 +5,7 @@ int checklimitforwarning(float value,float minlimit,float maxlimit)
   if(minlimit<=value && value<=(minlimit+tolerance))
     return 1;
     //1-Approaching lower limit
-  if((maxlimit-tolerance)<=value && value<=maxlimit){
+  if((maxlimit-tolerance)<=value && value<=maxlimit)
     return 2;
     //2-Approaching upper limit
 }
