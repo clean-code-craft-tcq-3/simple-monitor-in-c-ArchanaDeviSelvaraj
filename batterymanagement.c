@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "test.h"
+#include "batterymanagement.h"
 
 int isTemperatureInvalid(float temperature)
 {
