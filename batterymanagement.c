@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "test.h"
 
+//SOC means state of charge
+
 int isTemperatureInvalid(float temperature)
 {
   if(l==1)
