@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "batterymanagement.c"
 int isValuebreached(float value,float minlimit,float maxlimit)
 {
   int alertcount=0;
