@@ -1,6 +1,6 @@
 #include "batterymanagement.h"
 
-checklimitforwarning(float value,float minlimit,float maxlimit)
+int checklimitforwarning(float value,float minlimit,float maxlimit)
 {
   if(minlimit<=value && value<=(minlimit+tolerance))
     return 1;
