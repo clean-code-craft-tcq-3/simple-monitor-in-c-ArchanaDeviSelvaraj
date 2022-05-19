@@ -10,7 +10,7 @@ int TempCheck(float temperature)
   printf("Temperature ");
   if(l==2)
   printf("Temperatur ");
-  int isTemperatureInvalid = checkvaluebreach(temperature,0,45);
+  int isTemperatureInvalid = isValuebreached(temperature,0,45);
   return isTemperatureInvalid;
 }
   
@@ -20,7 +20,7 @@ int SocCheck(float soc)
   printf("State of Charge ");
   if(l==2)
   printf("Ladezustand ");
-  int isSocInvalid = checkvaluebreach(soc,20,80);
+  int isSocInvalid = isValuebreached(soc,20,80);
   return isSocInvalid;
 }
   
@@ -30,7 +30,7 @@ int ChargerateCheck(float chargeRate)
   printf("Charge Rate ");
   if(l==2)
   printf("Ladestrom ");
-  int isChargerateInvalid = checkvaluebreach(chargeRate,0,0.8);
+  int isChargerateInvalid = isValuebreached(chargeRate,0,0.8);
   return isChargerateInvalid;
 }
 
