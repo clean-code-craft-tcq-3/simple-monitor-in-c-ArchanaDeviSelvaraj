@@ -24,7 +24,5 @@ void earlywarning(int invalid,float temperature, float soc, float chargeRate)
    printbatterystatus(temperature,soc,chargeRate);
   }
   else
-  {
-      printbatterystatusnotokay();
-  }
+  printbatterystatusnotokay();
 }
