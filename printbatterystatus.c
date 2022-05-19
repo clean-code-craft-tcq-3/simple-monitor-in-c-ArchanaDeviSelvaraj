@@ -27,6 +27,7 @@ printchargeratewarningL2(isChargerateApproachingLimit);
 void isTempApproachinglimit(float temperature)
 {
 int isTempApproachingLimit = warning(temperature,0,45);
+printf("%d\n",isTempApproachingLimit);
 printtempwarning(isTempApproachingLimit);
 }
 void isSocApproachinglimit(float soc)
