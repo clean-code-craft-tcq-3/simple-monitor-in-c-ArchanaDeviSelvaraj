@@ -14,3 +14,6 @@ void printchargeratewarningL1(int isChargerateApproachingLimit);
 void printchargeratewarningL2(int isChargerateApproachingLimit);
 void printmessage();
 void printbatterystatusnotokay();
+void printlowlimitbreach();
+void printhighlimitbreach();
+void printnobreach();
