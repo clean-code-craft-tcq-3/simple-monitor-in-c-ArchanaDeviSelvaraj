@@ -4,7 +4,7 @@
 enum languages{English=1,German=2};
 enum languages l;
 
-int TempCheck(float temperature)
+int isTemperatureInvalid(float temperature)
 {
   if(l==1)
   printf("Temperature ");
@@ -14,7 +14,7 @@ int TempCheck(float temperature)
   return isTemperatureInvalid;
 }
   
-int SocCheck(float soc)
+int isSocInvalid(float soc)
 {
   if(l==1)
   printf("State of Charge ");
@@ -24,7 +24,7 @@ int SocCheck(float soc)
   return isSocInvalid;
 }
   
-int ChargerateCheck(float chargeRate)
+int isChargerateInvalid(float chargeRate)
 {
   if(l==1)
   printf("Charge Rate ");
