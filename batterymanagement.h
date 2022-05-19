@@ -17,3 +17,10 @@ void printbatterystatusnotokay();
 void printlowlimitbreach();
 void printhighlimitbreach();
 void printnobreach();
+void printtempwarning(int isTempApproachingLimit);
+void printsocwarning(int isSocApproachingLimit);
+void printchargeratewarning(int isChargerateApproachingLimit);
+void isTempApproachinglimit(float temperature);
+void isSocApproachinglimit(float soc);
+void isChargerateApproachinglimit(float chargeRate);
+
