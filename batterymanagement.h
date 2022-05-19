@@ -12,3 +12,5 @@ void printsocwarningL1(int isSocApproachingLimit);
 void printsocwarningL2(int isSocApproachingLimit);
 void printchargeratewarningL1(int isChargerateApproachingLimit);
 void printchargeratewarningL2(int isChargerateApproachingLimit);
+void printmessage();
+void printbatterystatusnotokay();
