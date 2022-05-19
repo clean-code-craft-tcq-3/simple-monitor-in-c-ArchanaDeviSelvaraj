@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include "test.h"
 
-enum languages{English=1,German=2};
-enum languages l;
-
 int isTemperatureInvalid(float temperature)
 {
   if(l==1)
