@@ -10,7 +10,7 @@ int isValuebreached(float value,float minlimit,float maxlimit)
     alertcount=1;
     // alertcount=1 means value breached
   }
-  else if (value > maxlimit){if(l==1)
+  else if (value > maxlimit){if(l==1){
     if(l==1)
     printf("value is above the limit\n");
     if(l==2) 
